@@ -5,6 +5,26 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: Quart Bare",
+            "type": "python",
+            "request": "launch",
+            "module": "quart",
+            "cwd": "${workspaceFolder}/app/backend",
+            "env": {
+                "QUART_APP": "main:app",
+                "QUART_ENV": "development",
+                "QUART_DEBUG": "0"
+            },
+            "args": [
+                "run",
+                "--no-reload",
+                "-p 50505"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "envFile": "${workspaceFolder}/.azure/ez-dev/.env",
+        },
+        {
             "name": "Python: Quart",
             "type": "python",
             "request": "launch",
